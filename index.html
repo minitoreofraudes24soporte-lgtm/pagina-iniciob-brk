@@ -3,104 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vitrine demonstrativa de joias, anéis, alianças, brincos, colares e acessórios.">
+  <title>Essência Joias | Inspiração e Elegância</title>
 
-  <title>Chocolateria Essência | Chocolates e Presentes</title>
-
-  <meta name="description" content="Conheça nossa seleção de chocolates, barras, bombons e presentes especiais. Uma experiência de sabor e elegância.">
-
-  <meta name="theme-color" content="#38251e">
-
-  <!-- Bootstrap CSS -->
+  <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
+  <!-- ÍCONES -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-  <!-- Fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FONTES -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --marrom: #38251e;
-      --marrom-escuro: #251812;
-      --caramelo: #b77a46;
-      --creme: #f7f1e8;
-      --bege: #e9ddce;
-      --texto: #55443b;
-      --branco: #fffdf9;
+      --gold: #b9975b;
+      --gold-dark: #91703d;
+      --cream: #faf7f1;
+      --dark: #26231f;
+      --muted: #77716a;
+      --border: #e9e2d7;
     }
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
       scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
-      background: var(--branco);
-      color: var(--texto);
-      font-family: 'DM Sans', sans-serif;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', serif;
+      color: var(--dark);
+      background: #fff;
+      font-family: "DM Sans", sans-serif;
     }
 
     a {
+      color: inherit;
       text-decoration: none;
     }
 
-    .announcement {
-      background: var(--marrom-escuro);
-      color: #fff4e7;
+    a:hover {
+      color: var(--gold-dark);
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .notice {
+      background: #eee8dc;
       text-align: center;
-      padding: 10px;
+      font-size: 12px;
+      padding: 9px 15px;
+    }
+
+    .topbar {
+      background: #29241e;
+      color: white;
+      text-align: center;
       font-size: 11px;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
+      padding: 11px;
     }
 
-    .navbar {
-      background: var(--creme);
-      padding: 18px 0;
+    .header {
+      background: white;
+      border-bottom: 1px solid var(--border);
     }
 
-    .brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      color: var(--marrom);
-      font-weight: 700;
+    .logo {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 38px;
+      font-weight: 600;
+      letter-spacing: 2px;
       line-height: 1;
     }
 
-    .brand small {
+    .logo span {
       display: block;
-      text-align: center;
-      font-family: 'DM Sans', sans-serif;
+      font-family: "DM Sans", sans-serif;
       font-size: 9px;
-      font-weight: 500;
       letter-spacing: 4px;
-      margin-top: 7px;
-      text-transform: uppercase;
+      margin-top: 6px;
+      text-align: center;
     }
 
-    .navbar .nav-link {
-      color: var(--marrom);
+    .search {
+      width: 100%;
+      padding: 12px 20px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      font-size: 13px;
+      outline: none;
+    }
+
+    .header-icon {
+      font-size: 21px;
+      margin-left: 17px;
+    }
+
+    .navbar {
+      border-top: 1px solid #f4f0e9;
+    }
+
+    .nav-link {
       font-size: 12px;
       font-weight: 600;
-      margin: 0 8px;
-    }
-
-    .navbar .nav-link:hover {
-      color: var(--caramelo);
-    }
-
-    .nav-icons a {
-      color: var(--marrom);
-      font-size: 20px;
-      margin-left: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0 10px;
     }
 
     .hero {
@@ -109,155 +123,773 @@
       align-items: center;
       color: white;
       background:
-        linear-gradient(90deg, rgba(34,20,14,.83), rgba(34,20,14,.15)),
-        url('https://images.unsplash.com/photo-1548907040-4d42f9f4b2f8?auto=format&fit=crop&w=2000&q=85')
-        center/cover no-repeat;
+        linear-gradient(90deg, rgba(0,0,0,.67), rgba(0,0,0,.04)),
+        url("https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1900&q=85")
+        center / cover;
     }
 
-    .hero-content {
-      max-width: 600px;
-      padding: 80px 0;
-    }
-
-    .eyebrow {
-      color: #e5b987;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 4px;
+    .hero small {
       text-transform: uppercase;
-      margin-bottom: 20px;
+      letter-spacing: 3px;
     }
 
     .hero h1 {
-      font-size: clamp(44px, 6vw, 76px);
-      line-height: 1.08;
-      margin-bottom: 24px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(50px, 7vw, 90px);
+      line-height: 1;
+      margin: 20px 0;
     }
 
     .hero p {
-      font-size: 15px;
-      line-height: 1.9;
-      color: #f4e8dc;
-      max-width: 470px;
-      margin-bottom: 30px;
+      font-size: 16px;
+      max-width: 460px;
+      line-height: 1.8;
     }
 
-    .btn-chocolate {
-      background: var(--marrom);
+    .btn-gold {
+      display: inline-block;
+      background: var(--gold);
+      border: 1px solid var(--gold);
       color: white;
-      border: 1px solid var(--marrom);
-      padding: 13px 25px;
-      font-size: 12px;
+      padding: 14px 32px;
+      font-size: 11px;
       font-weight: 700;
-      border-radius: 2px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
       transition: .3s;
     }
 
-    .btn-chocolate:hover {
-      background: var(--caramelo);
-      border-color: var(--caramelo);
-      color: white;
-    }
-
-    .btn-light-outline {
-      display: inline-block;
-      border: 1px solid white;
-      color: white;
-      padding: 13px 25px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .btn-light-outline:hover {
+    .btn-gold:hover {
       background: white;
-      color: var(--marrom);
+      color: var(--gold-dark);
     }
 
     .section {
-      padding: 85px 0;
-    }
-
-    .section-kicker {
-      color: var(--caramelo);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
+      padding: 80px 0;
     }
 
     .section-title {
-      color: var(--marrom);
-      font-size: clamp(32px, 4vw, 48px);
-      line-height: 1.2;
-      margin-bottom: 18px;
+      text-align: center;
+      margin-bottom: 45px;
     }
 
-    .section-description {
-      font-size: 14px;
-      line-height: 1.9;
-      max-width: 660px;
+    .section-title small {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      color: var(--gold-dark);
     }
 
-    .categories {
-      background: var(--creme);
+    .section-title h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 500;
+      margin-top: 12px;
     }
 
-    .category-card {
-      position: relative;
+    .category {
       display: block;
-      height: 350px;
+      position: relative;
       overflow: hidden;
-      color: white;
-      background: var(--marrom);
+      background: var(--cream);
+      height: 370px;
     }
 
-    .category-card img {
+    .category img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform .6s;
+      transition: .5s;
     }
 
-    .category-card:hover img {
+    .category:hover img {
       transform: scale(1.06);
     }
 
-    .category-card::after {
-      content: "";
+    .category-name {
       position: absolute;
-      inset: 0;
-      background: linear-gradient(0deg, rgba(31,18,12,.82), transparent 75%);
-    }
-
-    .category-caption {
-      position: absolute;
-      z-index: 2;
-      left: 25px;
+      bottom: 20px;
+      left: 20px;
       right: 20px;
-      bottom: 24px;
-    }
-
-    .category-caption h3 {
-      font-size: 29px;
-      margin-bottom: 8px;
-    }
-
-    .category-caption span {
-      font-size: 11px;
-      letter-spacing: 1px;
+      background: rgba(255,255,255,.94);
+      padding: 15px;
+      text-align: center;
       text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
     }
 
-    .products {
-      background: var(--branco);
-    }
-
-    .product-card {
+    .product {
       height: 100%;
-      background: white;
+      text-align: center;
     }
 
     .product-image {
       position: relative;
-      overflow
+      background: #faf9f6;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+      transition: .4s;
+    }
+
+    .product:hover img {
+      transform: scale(1.05);
+    }
+
+    .product-tag {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      background: white;
+      padding: 7px 11px;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .product h3 {
+      font-size: 15px;
+      font-weight: 500;
+      margin: 17px 0 7px;
+    }
+
+    .product p {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .editorial {
+      background: var(--cream);
+    }
+
+    .editorial img {
+      width: 100%;
+      height: 530px;
+      object-fit: cover;
+    }
+
+    .editorial-text {
+      padding: 60px 9%;
+    }
+
+    .editorial-text small {
+      color: var(--gold-dark);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    .editorial-text h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(43px, 5vw, 65px);
+      line-height: 1.1;
+      margin: 20px 0;
+    }
+
+    .editorial-text p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 2;
+    }
+
+    .benefit {
+      text-align: center;
+      padding: 25px;
+    }
+
+    .benefit i {
+      font-size: 32px;
+      color: var(--gold-dark);
+    }
+
+    .benefit h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 20px 0 10px;
+    }
+
+    .benefit p {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .about {
+      background: #f8f6f1;
+    }
+
+    .about p {
+      color: #69635c;
+      line-height: 2;
+      font-size: 15px;
+    }
+
+    .footer {
+      background: #29251f;
+      color: white;
+      padding: 70px 0 25px;
+    }
+
+    .footer h4 {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      margin-bottom: 23px;
+    }
+
+    .footer p,
+    .footer a,
+    .footer li {
+      font-size: 12px;
+      line-height: 2;
+      color: #d0c7bb;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    .footer ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer li {
+      margin-bottom: 6px;
+    }
+
+    .copyright {
+      border-top: 1px solid #51483d;
+      margin-top: 45px;
+      padding-top: 25px;
+      color: #c6bbac;
+      font-size: 11px;
+    }
+
+    @media(max-width: 991px) {
+      .hero {
+        min-height: 500px;
+      }
+
+      .category {
+        height: 290px;
+      }
+
+      .editorial img {
+        height: 400px;
+      }
+
+      .editorial-text {
+        padding: 40px 25px;
+      }
+    }
+
+    @media(max-width: 575px) {
+      .logo {
+        font-size: 30px;
+      }
+
+      .hero {
+        min-height: 450px;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+
+      .category {
+        height: 250px;
+      }
+
+      .product-image img {
+        height: 210px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- IDENTIFICAÇÃO -->
+  <div class="notice">
+    Modelo demonstrativo independente inspirado no segmento de joalheria.
+    Não é a loja oficial da Joias Prime.
+  </div>
+
+  <div class="topbar">
+    JOIAS • ELEGÂNCIA • INSPIRAÇÃO
+  </div>
+
+  <!-- CABEÇALHO -->
+  <header class="header sticky-top">
+    <div class="container">
+      <div class="row align-items-center py-3 g-3">
+
+        <div class="col-7 col-md-3">
+          <a href="#inicio" class="logo">
+            Essência Joias
+            <span>Elegância em detalhes</span>
+          </a>
+        </div>
+
+        <div class="col-md-6 d-none d-md-block">
+          <form id="searchForm">
+            <input
+              class="search"
+              id="searchInput"
+              type="search"
+              placeholder="Busque por anéis, colares, brincos..."
+              aria-label="Buscar categorias">
+          </form>
+        </div>
+
+        <div class="col-5 col-md-3 text-end">
+          <a href="#sobre" class="header-icon" aria-label="Sobre">
+            <i class="bi bi-person"></i>
+          </a>
+
+          <a href="#categorias" class="header-icon" aria-label="Categorias">
+            <i class="bi bi-heart"></i>
+          </a>
+
+          <a href="https://www.joiasprime.com.br/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="header-icon"
+             aria-label="Visitar loja oficial">
+            <i class="bi bi-bag"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+
+        <button
+          class="navbar-toggler mx-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="menu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#categorias">Categorias</a></li>
+            <li class="nav-item"><a class="nav-link" href="#destaques">Destaques</a></li>
+            <li class="nav-item"><a class="nav-link" href="#editorial">Coleção</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre">Institucional</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <small>Inspiração em joias</small>
+        <h1>Detalhes que<br>encantam.</h1>
+
+        <p>
+          Explore o universo das joias e descubra
+          inspirações para expressar sua personalidade
+          com elegância.
+        </p>
+
+        <a href="#categorias" class="btn-gold mt-3">
+          Explorar categorias
+        </a>
+      </div>
+    </section>
+
+    <!-- CATEGORIAS -->
+    <section class="section" id="categorias">
+      <div class="container">
+
+        <div class="section-title">
+          <small>Universo das joias</small>
+          <h2>Explore por categoria</h2>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-6 col-lg-3">
+            <a href="#destaques" class="category">
+              <img
+                src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=85"
+                alt="Anéis">
+              <span class="category-name">Anéis</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <a href="#destaques" class="category">
+              <img
+                src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=85"
+                alt="Brincos">
+              <span class="category-name">Brincos</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <a href="#destaques" class="category">
+              <img
+                src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85"
+                alt="Colares">
+              <span class="category-name">Colares</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <a href="#destaques" class="category">
+              <img
+                src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=700&q=85"
+                alt="Joias e acessórios">
+              <span class="category-name">Acessórios</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section class="section pt-0" id="destaques">
+      <div class="container">
+
+        <div class="section-title">
+          <small>Seleção editorial</small>
+          <h2>Joias em destaque</h2>
+          <p class="text-muted small mt-3">
+            Fotografias ilustrativas, sem indicação de preço ou disponibilidade.
+          </p>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-6 col-lg-3">
+            <article class="product">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=85"
+                  alt="Anel delicado">
+                <span class="product-tag">Inspiração</span>
+              </div>
+              <h3>Anéis delicados</h3>
+              <p>Elegância em cada detalhe</p>
+            </article>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <article class="product">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=85"
+                  alt="Brincos sofisticados">
+                <span class="product-tag">Inspiração</span>
+              </div>
+              <h3>Brincos sofisticados</h3>
+              <p>Beleza e personalidade</p>
+            </article>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <article class="product">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85"
+                  alt="Colares e correntes">
+                <span class="product-tag">Inspiração</span>
+              </div>
+              <h3>Colares e correntes</h3>
+              <p>Charme para diferentes ocasiões</p>
+            </article>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <article class="product">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=700&q=85"
+                  alt="Conjunto de joias">
+                <span class="product-tag">Inspiração</span>
+              </div>
+              <h3>Joias para presentear</h3>
+              <p>Inspirações para momentos especiais</p>
+            </article>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+          <a
+            href="https://www.joiasprime.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-gold">
+            Visitar Joias Prime oficial
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDITORIAL -->
+    <section class="editorial" id="editorial">
+      <div class="container-fluid p-0">
+        <div class="row g-0 align-items-center">
+
+          <div class="col-lg-6">
+            <img
+              src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1200&q=85"
+              alt="Editorial de joias">
+          </div>
+
+          <div class="col-lg-6">
+            <div class="editorial-text">
+              <small>Beleza atemporal</small>
+
+              <h2>Uma joia, muitas histórias.</h2>
+
+              <p>
+                Joias acompanham momentos especiais e podem
+                representar afeto, personalidade e lembranças.
+              </p>
+
+              <p>
+                Descubra referências de anéis, colares,
+                brincos e acessórios que combinam
+                com diferentes estilos.
+              </p>
+
+              <a href="#categorias" class="btn-gold mt-3">
+                Descobrir inspirações
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INFORMAÇÕES -->
+    <section class="section">
+      <div class="container">
+
+        <div class="row g-4">
+
+          <div class="col-md-4">
+            <div class="benefit">
+              <i class="bi bi-gem"></i>
+              <h3>Inspiração em joias</h3>
+              <p>
+                Categorias e referências visuais
+                para explorar diferentes estilos.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="benefit">
+              <i class="bi bi-heart"></i>
+              <h3>Momentos especiais</h3>
+              <p>
+                Ideias de acessórios para ocasiões
+                e celebrações.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="benefit">
+              <i class="bi bi-shop"></i>
+              <h3>Loja oficial</h3>
+              <p>
+                Para consultar produtos, valores e pedidos,
+                visite diretamente a Joias Prime.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INSTITUCIONAL -->
+    <section class="section about" id="sobre">
+      <div class="container">
+
+        <div class="section-title">
+          <small>Referência institucional</small>
+          <h2>Conheça a Joias Prime</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9 text-center">
+
+            <p>
+              A Joias Prime possui um portal de comércio
+              eletrônico acessível pelo endereço
+              <a href="https://www.joiasprime.com.br/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                www.joiasprime.com.br
+              </a>.
+            </p>
+
+            <p>
+              O universo da joalheria reúne produtos como
+              anéis, brincos, colares, correntes,
+              alianças e outros acessórios.
+            </p>
+
+            <p>
+              Esta página é um modelo demonstrativo independente
+              de apresentação visual e não é operada pela
+              Joias Prime. Não processa pedidos,
+              pagamentos ou dados de clientes.
+            </p>
+
+            <a href="https://www.joiasprime.com.br/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn-gold mt-3">
+              Acessar site oficial
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer" id="contato">
+    <div class="container">
+
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+          <h4>Essência Joias</h4>
+
+          <p>
+            Modelo demonstrativo de vitrine de joias
+            com referências de anéis, brincos,
+            colares e acessórios.
+          </p>
+
+          <p>
+            Esta página é independente e não representa
+            uma loja oficial ou autorizada da Joias Prime.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4>Navegação</h4>
+
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#categorias">Categorias</a></li>
+            <li><a href="#destaques">Destaques</a></li>
+            <li><a href="#editorial">Coleção</a></li>
+            <li><a href="#sobre">Institucional</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4>Site de referência</h4>
+
+          <p>
+            <strong>Joias Prime</strong><br>
+            Portal oficial:
+            <a href="https://www.joiasprime.com.br/"
+               target="_blank"
+               rel="noopener noreferrer">
+              www.joiasprime.com.br
+            </a>
+          </p>
+
+          <p>
+            Para informações sobre produtos,
+            compras, entregas, trocas e atendimento,
+            utilize os canais oficiais da loja.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        <p>
+          As marcas, logotipos e demais elementos
+          de identidade da Joias Prime pertencem
+          aos respectivos titulares.
+        </p>
+
+        <p class="mb-0">
+          © 2026 Essência Joias — Modelo demonstrativo independente.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- BUSCA SIMPLES -->
+  <script>
+    document.getElementById("searchForm")
+      .addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const termo = document.getElementById("searchInput")
+          .value.trim().toLowerCase();
+
+        if (!termo) return;
+
+        const palavras = [
+          "anel", "aneis", "anéis",
+          "brinco", "brincos",
+          "colar", "colares",
+          "corrente", "correntes",
+          "aliança", "alianças",
+          "joia", "joias"
+        ];
+
+        const encontrou = palavras.some(
+          palavra => palavra.includes(termo) ||
+                     termo.includes(palavra)
+        );
+
+        if (encontrou) {
+          document.getElementById("categorias")
+            .scrollIntoView({ behavior: "smooth" });
+        } else {
+          alert(
+            "Esta é uma vitrine demonstrativa. " +
+            "Para buscar produtos reais, visite a loja oficial."
+          );
+        }
+      });
+  </script>
+
+</body>
+</html>
